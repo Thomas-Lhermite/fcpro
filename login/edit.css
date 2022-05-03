@@ -1,0 +1,10 @@
+/*======EDIT======*/
+
+#bootstrap-overrides .modal-content {
+    line-height: 1;
+    border: none;
+}
+
+#bootstrap-overrides.modal-content h5 {
+    padding-bottom: 5%;
+}

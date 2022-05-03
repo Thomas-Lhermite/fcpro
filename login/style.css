@@ -1,0 +1,192 @@
+    /*======Landing.php======*/
+    
+    .menu-top {
+        background-color: #fff;
+        display: flow-root;
+        box-shadow: 0.7rem 0.3rem 0.3rem rgba(59, 59, 59, 0.808);
+    }
+    
+    .menu-top-img {
+        float: left;
+        height: 5rem;
+        padding-left: 1%;
+        padding-top: 1%;
+    }
+    
+    #bootstrap-overrides .menu-top-admin {
+        padding-top: 2%;
+        padding-bottom: 0.7%;
+        width: auto;
+        text-align: center;
+    }
+    
+    .menu-top-admin .menu-top-ul .menu-top-btn {
+        display: inline-block;
+        list-style-type: none;
+        width: 17.5%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+    }
+    
+    .menu-top-admin .menu-top-ul .menu-top-btn a {
+        text-decoration: none;
+        color: rgb(122, 122, 122);
+    }
+    
+    .menu-top-admin .menu-top-ul .menu-top-btn a:hover {
+        color: rgb(122, 122, 122);
+        text-decoration: underline;
+        text-decoration-thickness: 0.2em;
+    }
+    
+    body {
+        background-color: rgb(85, 84, 84) !important;
+        margin: 0 !important;
+        padding-bottom: 64px;
+        min-height: 100vh;
+        position: relative;
+    }
+    
+    #bootstrap-overrides footer {
+        background-color: #b2def3;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 4rem;
+        text-align: center;
+    }
+    
+    #bootstrap-overrides footer .title-footer {
+        font-size: 1rem;
+        padding-top: 1%;
+        color: #424242;
+    }
+    
+    #bootstrap-overrides .container1 {
+        height: 35%;
+        margin-bottom: 5%;
+    }
+    
+    #bootstrap-overrides .container2 {
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: auto;
+        padding-bottom: 5%;
+        background-color: #fff;
+        color: rgb(85, 84, 84);
+        margin-top: 5%;
+        box-shadow: 0.7rem 0.3rem 0.3rem rgba(59, 59, 59, 0.808);
+    }
+    
+    #bootstrap-overrides .container2-table {
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        width: 90%;
+        background-color: #fff;
+        color: rgb(85, 84, 84);
+        margin-top: 5%;
+        box-shadow: 0.7rem 0.3rem 0.3rem rgba(59, 59, 59, 0.808);
+    }
+    
+    #bootstrap-overrides .msg-info-file {
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 5%;
+        padding-left: 5%;
+        padding-top: 1%;
+    }
+    
+    #bootstrap-overrides .title-stat {
+        padding-top: 5%;
+        padding-left: 5%;
+        text-decoration: underline;
+        text-underline-offset: 1em;
+    }
+    
+    #bootstrap-overrides .data {
+        padding-top: 4%;
+        padding-left: 5%;
+    }
+    
+    #bootstrap-overrides .data .arrow-data {
+        font-size: 1.2rem;
+    }
+    /*======user.php======*/
+    
+    #bootstrap-overrides .close a {
+        line-height: 1;
+        text-decoration: none;
+        color: rgb(179, 179, 179);
+    }
+    
+    #bootstrap-overrides .text-left {
+        padding-top: 5%;
+        padding-left: auto;
+        padding-right: auto;
+    }
+    
+    #bootstrap-overrides .img-btn-file {
+        height: 2rem;
+    }
+    /*Tableau de Bdd*/
+    
+    #bootstrap-overrides .container-table {
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 5%;
+        width: 80%;
+    }
+    
+    #bootstrap-overrides .table-login {
+        margin-left: auto;
+        margin-right: auto;
+        display: table;
+        width: 100%;
+    }
+    
+    #bootstrap-overrides .table-login .title-table-login {
+        padding-bottom: 1%;
+    }
+    
+    #bootstrap-overrides .table-login .top-file {
+        display: inline-block;
+        padding-bottom: 1%;
+    }
+    
+    #bootstrap-overrides .table-login .title-table-file {
+        float: left;
+    }
+    
+    #bootstrap-overrides .table-login th {
+        background-color: #b2def3;
+        font-weight: 500;
+        vertical-align: middle;
+        text-align: left;
+    }
+    
+    #bootstrap-overrides .table-login td {
+        padding-top: 1%;
+        vertical-align: top;
+        text-align: left;
+    }
+    
+    #bootstrap-overrides .table-login td,
+    th {
+        width: 1%;
+        height: 5rem;
+        padding-left: 1.5%;
+        border: 0.01em solid #9999997e;
+        border-collapse: collapse;
+    }
+    
+    #bootstrap-overrides .table-login .btn-table-color a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    #bootstrap-overrides .table-login .btn-table-color a:hover {
+        text-decoration: none;
+        color: #fff;
+    }

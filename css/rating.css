@@ -1,0 +1,53 @@
+.container {
+    width: 70%;
+    margin: auto;
+    font-size: 1rem;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.container .content {
+    margin: auto;
+}
+
+.container .content h5 {
+    padding: 2% 0;
+}
+
+.star-rate {
+    margin: 1% auto;
+    float: left;
+}
+
+.star-rate input {
+    display: none;
+}
+
+.container .textarea-rate textarea {
+    font-family: 'Trebuchet MS', sans-serif;
+    padding: 3%;
+    border: 1px solid #a8a8a881;
+    border-radius: 0.7rem;
+    resize: none;
+}
+
+.container .textarea-rate textarea:focus {
+    outline: none !important;
+    border: 1px solid #52525281;
+    box-shadow: 0 0 2px #353535;
+}
+
+.star-rate label {
+    font-size: 2rem;
+    float: right;
+    color: #535050;
+    transition: all 0.2s ease;
+}
+
+.star-rate input:not(:checked)~label:hover,
+.star-rate input:not(:checked)~label:hover~label {
+    color: #36a9e1;
+}
+
+.star-rate input:checked~label {
+    color: #36a9e1;
+}
