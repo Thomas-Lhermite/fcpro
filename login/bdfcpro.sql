@@ -4,6 +4,8 @@
 
 /*USE BDFCPRO ;*/
 
+USE `n-d-l-p-fcpro_bd`;
+
 CREATE TABLE users
 (	id 		INT			NOT NULL   PRIMARY KEY   AUTO_INCREMENT,
 	username		CHAR( 30 )	NOT NULL , 
