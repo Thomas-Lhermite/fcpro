@@ -84,7 +84,7 @@
                                 echo "<thead>
                                         <tr>
                                             <th>id</th>
-                                            <th>Nom d'utilisateur</th>
+                                            <th>Nom</th>
                                             <th>Permissions</th>
                                             <th>Modifier</th>
                                             <th>Réinitialiser</th>
@@ -107,7 +107,7 @@
                                     }
                                 }
                                 echo "</table>";
-                                echo '<br/><br/><a href="crud/create-user.php" class="a-add-user">Ajouter un Utilisateur</a>';           
+                                echo '<br/><br/><a href="crud/create-user.php" class="a-add-user">Ajouter un formateur</a>';           
                             } else {
                                 echo"Vous ne possédez pas les permissions nécessaire pour visionner cette page !";
                             }
