@@ -59,6 +59,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="index.php">Accueil</a>
         <a href="formation.php">Formations</a>
+        <a href="formateur.php">Formateurs</a>
         <?php
             if(isset($_SESSION['user'])) {
                 echo "<a class='login' href='login/deconnexion.php'>Déconnexion</a>";
