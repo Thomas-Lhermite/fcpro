@@ -5,11 +5,6 @@
 /*USE BDFCPRO ;*/
 
 USE `n-d-l-p-fcpro_bd`;
-Drop TABLE IF EXISTS users (
-    id  INT   NOT NULL   PRIMARY KEY   AUTO_INCREMENT,
-    name varchar(255) NOT NULL,
-    date datetime NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
 
 CREATE TABLE users
 (	id 		INT			NOT NULL   PRIMARY KEY   AUTO_INCREMENT,
