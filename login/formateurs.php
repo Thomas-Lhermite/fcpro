@@ -68,71 +68,50 @@
         <main>
             <div class="container">
                 <div class="content">
-                    <h3 class="title-stat">Formateurs :&nbsp;&nbsp;</h3>
+                    <h3 class="title-stat">Utilisateurs :&nbsp;&nbsp;</h3>
                     <div class="msg-info-box">
+                    </div>
                         <?php
-                            if(isset($_GET['formation'])){
-                                $formation = htmlspecialchars($_GET['formation']);
-                                switch($formation){
-                                    case 'error':
-                                        echo "<div class='alert-danger'>Un problème est survenue lors de la création de la formation <button class='close' data-dismiss='modal' aria-label='Close'><a href='formations.php'>&times;</a></button></div>";
-                                    break;
+                            require_once 'config.php';
 
-                                    case 'success':
-                                        echo '<div class="alert-success">La formation a été créer avec succès ! <button class="close" data-dismiss="modal" aria-label="Close"><a href="formations.php">&times;</a></button></div>';
-                                    break; 
-                                }
-                            } else if(isset($_GET['editf'])){
-                                $editf = htmlspecialchars($_GET['editf']);
-                                switch($editf){
-                                    case 'error':
-                                        echo "<div class='alert-danger'>La modification n'a pas été prise en compte car une formation de ce nom existe déjà.<button class='close' data-dismiss='modal' aria-label='Close'><a href='formations.php'>&times;</a></button></div>";
-                                    break;
+                            $user = $_SESSION['user'];
 
-                                    case 'success':
-                                        echo '<div class="alert-success">La modification a été prise en compte avec succès. <button class="close" data-dismiss="modal" aria-label="Close"><a href="formations.php">&times;</a></button></div>';
-                                    break; 
+                            $check = $bdd->prepare('SELECT * FROM users;');
+                            $check->execute(array($user));
+
+                            if($_SESSION['permissions'] === '**') {
+                                echo "<table class='table'>";
+                                echo "<thead>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>Nom d'utilisateur</th>
+                                            <th>Permissions</th>
+                                            <th>Modifier</th>
+                                            <th>Réinitialiser</th>
+                                            <th>Supprimer</th>
+                                      </tr>
+                                    </thead>";
+
+                                while ($data = $check->fetch()) {
+                                    if($data['id'] != 1) {
+                                        if($data['id'] != $_SESSION['id']){
+                                            echo "<tbody><tr>\n";
+                                            echo "<td data-label='Identifiant'><strong>".    $data['id']    ."</strong></td>\n";
+                                            echo "<td data-label='Nom'>".    $data['username']    ."</td>\n";
+                                            echo "<td data-label='Permissions'>".    $data['permissions'] ."</td>\n";
+                                            echo '<td data-label="Modifier"><div class="btn-table-color"><button><a href="crud/edit.php?id=' .$data['id']. '">Modifier</a></button></td>';
+                                            echo '<td data-label="Réinitialiser"><div class="btn-table-color"><button><a href="crud/reset.php?id=' .$data['id']. '">Réinitialiser</a></button></td>';
+                                            echo '<td data-label="Supprimer"><div class="btn-table-color"><button><a href="crud/delete.php?id=' .$data['id']. '">Supprimer</a></button></td>';
+                                            echo "</tr></tbody>";
+                                        }
+                                    }
                                 }
-                            } else if(isset($_GET['deletef'])){
-                                $deletef = htmlspecialchars($_GET['deletef']);
-                                switch($deletef){
-                                    case 'success':
-                                        echo '<div class="alert-success">La Suppression a été effectuée. <button class="close" data-dismiss="modal" aria-label="Close"><a href="formations.php">&times;</a></button></div>';
-                                    break; 
-                                }
+                                echo "</table>";
+                                echo '<br/><br/><a href="crud/create-user.php" class="a-add-user">Ajouter un Utilisateur</a>';           
+                            } else {
+                                echo"Vous ne possédez pas les permissions nécessaire pour visionner cette page !";
                             }
                         ?>
-                    </div>
-                    <?php
-                        require_once 'config.php';
-
-                        $check = $bdd->prepare('SELECT * FROM formations');
-                        $check->execute();
-                            echo "<table class='table'>";
-                            echo "<thead>
-                                    <tr>
-                                        <th>id</th>
-                                        <th>Titre de la formation</th>
-                                        <th>Fichier de la Formation</th>
-                                        <th>Modifier</th>
-                                        <th>Supprimer</th>
-                                    </tr>
-                                  </thead>";
-                            while ($data = $check->fetch()) {
-                                echo "<tbody><tr>\n";
-                                echo "<td data-label='Identifiant'><strong>".    $data['id']    ."</strong></td>\n";
-                                echo "<td data-label='Nom'>".    $data['title']    ."</td>\n";
-                                echo "<td data-label='Fichier'>".    $data['file'] ."</td>\n";
-                                echo '<td data-label="Modifier"><div class="btn-table-color"><button><a href="formations/editf.php?id=' .$data['id']. '">Modifier</a></button></td>';
-                                echo '<td data-label="Supprimer"><div class="btn-table-color"><button><a href="formations/deletef.php?id=' .$data['id']. '">Supprimer</a></button></td>';
-                                echo "</tr></tbody>";
-                            }
-                            echo "</table>";
-                            echo '<br/><br/><a href="formations/createf.php" class="form-link-u">Ajouter une formations</a>';   
-                    ?>
-                </div>
-            </div>
-        </main>
         <footer>
             <p>Copyright 2022 &copy; Fc-Pro | Tout droit réservés.</p>
         </footer>
