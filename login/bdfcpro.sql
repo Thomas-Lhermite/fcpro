@@ -46,5 +46,5 @@ CREATE TABLE IF NOT EXISTS upload (
 
 CREATE TABLE formateurs (
     id 		INT			NOT NULL   PRIMARY KEY   AUTO_INCREMENT,
-	nom 	CHAR( 30 )	NOT NULL , 
+	nom 	CHAR( 30 )	NOT NULL 
 ) ENGINE = InnoDB CHARACTER SET latin1 COLLATE latin1_bin;
