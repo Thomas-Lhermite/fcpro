@@ -18,6 +18,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="#">Accueil</a>
         <a href="formation.php">Formations</a>
+        <a href="formateurs.php">Formateurs</a>
         <?php
             if(isset($_SESSION['user'])) {
                 echo "<div class='sidenav-connect'>";

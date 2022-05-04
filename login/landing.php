@@ -26,6 +26,7 @@
             <a class='login' href="user.php"><i class="fas fa-caret-right"></i> Gestion des utilisateurs</a>
             <a class='login' href="formations.php"><i class="fas fa-caret-right"></i> Gestion des formations</a>
             <a class='login' href="file.php"><i class="fas fa-caret-right"></i> Gestion des fichiers</a>
+            <a class='login' href="formateurs.php"><i class="fas fa-caret-right"></i> Gestion des formateurs</a>
         </div>
         <a class='login' href="deconnexion.php">Déconnexion</a>
         <a class='login' style='font-size: 2rem' href=''><i class='fas fa-cogs'></i></a>
