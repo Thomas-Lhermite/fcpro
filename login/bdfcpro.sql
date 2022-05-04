@@ -34,12 +34,6 @@ CREATE TABLE formations (
     file    CHAR( 100 ) NOT NULL
 ) ENGINE = InnoDB CHARACTER SET latin1 COLLATE latin1_bin;
 
-CREATE TABLE formateurs (
-    id 		INT			NOT NULL   PRIMARY KEY   AUTO_INCREMENT,
-	nom 	CHAR( 20 )	NOT NULL , 
-) ENGINE = InnoDB CHARACTER SET latin1 COLLATE latin1_bin;
-
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
@@ -48,3 +42,9 @@ CREATE TABLE IF NOT EXISTS upload (
     name varchar(255) NOT NULL,
     date datetime NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE formateurs (
+    id 		INT			NOT NULL   PRIMARY KEY   AUTO_INCREMENT,
+	nom 	CHAR( 30 )	NOT NULL , 
+) ENGINE = InnoDB CHARACTER SET latin1 COLLATE latin1_bin;
