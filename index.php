@@ -15,10 +15,13 @@
     </head>
     <body id="bootstrap-overrides">
     <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Accueil</a>
-        <a href="formation.php">Formations</a>
-        <a href="formateur.php">Formateurs</a>
+        <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="formation.php">Formations</a></li>
+            <li><a href="formateur.php">Formateurs</a></li>
+            <li style="float:right"><a class="active" href="#about">Contact</a></li>
+        </ul>
+
         <?php
             if(isset($_SESSION['user'])) {
                 echo "<div class='sidenav-connect'>";
@@ -89,7 +92,6 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">FC PRO &copy; 2022 | Tout droit réservé</div>
         </main>
     </div>
 </body>
